@@ -2,6 +2,7 @@
 using namespace std;
 #include <cstdio>
 #include <cstring>
+#include <iomanip>
 #include "rlutil.h"
 using namespace rlutil;
 #include "alumno.h"
@@ -13,7 +14,9 @@ bool Alumno::cargar(){
     cls();
     cout << "Legajo: ";
     cin >> legajo;
-    ///TODO: Validar legajo
+    if (buscar_alumno(legajo) >= 0){
+        return false;
+    }
     cout << "Apellidos: ";
     cin.ignore();
     cin.getline(apellidos, 50);
@@ -172,12 +175,17 @@ void listar_alumnos(){
     cls();
     cout << "Listado de alumnos" << endl;
     cout << "------------------------" << endl;
-
-    cout << "Legajo\tCarrera\t\tApellidos\tNombres" << endl;
+    cout << left;
+    cout << setw(8) << "Legajo";
+    cout << setw(10) << "Carrera";
+    cout << setw(20) << "Apellidos";
+    cout << setw(20) << "Nombres" << endl;
 
     while(reg.leer(i++)){
-        //TODO: Listarlo con setw
-        cout << reg.getLegajo() << "\t" << reg.getIDCarrera() << "\t\t" << reg.getApellidos() << "\t\t" << reg.getNombres();
+        cout << setw(8) << reg.getLegajo();
+        cout << setw(10) << reg.getIDCarrera();
+        cout << setw(20) << reg.getApellidos();
+        cout << setw(20) << reg.getNombres();
         cout << endl;
     }
     cin.ignore();

@@ -32,18 +32,16 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="alumno.cpp" />
-		<Unit filename="alumno.h" />
-		<Unit filename="funciones.cpp" />
-		<Unit filename="funciones.h" />
-		<Unit filename="main.cpp" />
-		<Unit filename="menu.cpp" />
-		<Unit filename="menu.h" />
-		<Unit filename="rlutil.h" />
-		<Extensions>
-			<code_completion />
-			<envvars />
-			<debugger />
-		</Extensions>
+		<Unit filename="../src/Examen.cpp" />
+		<Unit filename="../src/Examen.h" />
+		<Unit filename="../src/alumno.cpp" />
+		<Unit filename="../src/alumno.h" />
+		<Unit filename="../src/funciones.cpp" />
+		<Unit filename="../src/funciones.h" />
+		<Unit filename="../src/main.cpp" />
+		<Unit filename="../src/menu.cpp" />
+		<Unit filename="../src/menu.h" />
+		<Unit filename="../src/rlutil.h" />
+		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

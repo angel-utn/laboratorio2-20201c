@@ -52,9 +52,8 @@ int opc;
         cout << "2) Modificar alumno" << endl;
         cout << "3) Listar alumno" << endl;
         cout << "4) Listar todos los alumnos" << endl;
-        cout << "5) Eliminar alumno" << endl;
         cout << "-------------------------" << endl;
-        cout << "0) Salir del programa" << endl;
+        cout << "0) Volver al menú principal" << endl;
         cout << endl << "Opción: ";
         cin >> opc;
 
@@ -98,9 +97,8 @@ int opc;
         cout << "1) Nuevo examen" << endl;
         cout << "2) Listar examen" << endl;
         cout << "3) Listar todos los exámenes" << endl;
-        cout << "4) Eliminar examen" << endl;
         cout << "-------------------------" << endl;
-        cout << "0) Salir del programa" << endl;
+        cout << "0) Volver al menú principal" << endl;
         cout << endl << "Opción: ";
         cin >> opc;
 

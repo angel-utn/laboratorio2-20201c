@@ -4,6 +4,7 @@ using namespace rlutil;
 using namespace std;
 
 #include "Examen.h"
+#include "alumno.h"
 #include "funciones.h"
 
 
@@ -34,20 +35,36 @@ void Examen::setNota(float nota) {
 }
 
 bool Examen::cargar() {
+    cls();
 	cout << "Legajo: ";
 	cin >> legajo;
+	if (buscar_alumno(legajo) < 0){
+        return false;
+	}
 
 	cout << "Id Materia: ";
 	cin >> idMateria;
+	if (idMateria <= 0){
+        return false;
+	}
+
+	if (buscar_examen(legajo, idMateria) >= 0){
+        return false;
+	}
 
 	cout << "Nota: ";
 	cin >> nota;
+	if (nota < 1){
+        return false;
+	}
 
 	return true;
 }
 
 void Examen::mostrar() {
 	cout << "Legajo     : " << legajo << endl;
+	Alumno a = getAlumno();
+	cout << "Alumno     : " << a.getApellidos() << ", " << a.getNombres() << endl;
 	cout << "Id Materia : " << idMateria << endl;
 	cout << "Nota       : " << nota << endl;
 }
@@ -93,6 +110,20 @@ bool Examen::leer(int pos) {
 	fclose(p);
 	return resultado;
 }
+
+Alumno Examen::getAlumno(){
+    Alumno reg;
+    int pos;
+    pos = buscar_alumno(legajo);
+    if (pos >= 0){
+        reg.leer(pos);
+    }
+    else{
+        reg.setLegajo(-1);
+    }
+    return reg;
+}
+
 
 bool nuevo_examen()
 {
@@ -150,7 +181,7 @@ int buscar_examen(int legajo, int idMateria)
 	Examen reg;
 	int i = 0;
 	while (reg.leer(i)) {
-		if (reg.getLegajo() == legajo 
+		if (reg.getLegajo() == legajo
 			&& reg.getIdMateria() == idMateria) {
 			return i;
 		}

@@ -88,3 +88,59 @@
 	"menu.h"
 	<clocale>
 
+1592690791 source:/home/angel/UTN/LAB2/Clase 15/App/src/Examen.cpp
+	<iostream>
+	"rlutil.h"
+	"Examen.h"
+	"alumno.h"
+	"funciones.h"
+
+1592689114 /home/angel/UTN/LAB2/Clase 15/App/src/rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1592690581 /home/angel/UTN/LAB2/Clase 15/App/src/Examen.h
+	"alumno.h"
+
+1592689114 /home/angel/UTN/LAB2/Clase 15/App/src/funciones.h
+
+1592689114 source:/home/angel/UTN/LAB2/Clase 15/App/src/funciones.cpp
+	<iostream>
+	"rlutil.h"
+	"funciones.h"
+
+1592689114 source:/home/angel/UTN/LAB2/Clase 15/App/src/main.cpp
+	<iostream>
+	"menu.h"
+	<clocale>
+
+1592689114 /home/angel/UTN/LAB2/Clase 15/App/src/menu.h
+
+1592689679 source:/home/angel/UTN/LAB2/Clase 15/App/src/menu.cpp
+	<iostream>
+	"rlutil.h"
+	"menu.h"
+	"funciones.h"
+	"alumno.h"
+	"Examen.h"
+
+1592689114 /home/angel/UTN/LAB2/Clase 15/App/src/alumno.h
+
+1592689551 source:/home/angel/UTN/LAB2/Clase 15/App/src/alumno.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+	"rlutil.h"
+	"alumno.h"
+	"funciones.h"
+

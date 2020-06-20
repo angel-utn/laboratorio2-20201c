@@ -1,4 +1,5 @@
 #pragma once
+#include "alumno.h"
 class Examen
 {
 private:
@@ -6,7 +7,9 @@ private:
 	int legajo;
 	float nota;
 
+
 public:
+    Alumno getAlumno();
 	int getLegajo();
 	void setLegajo(int legajo);
 
